@@ -31,3 +31,9 @@ Route::post('/categoria/store','CategoriaController@store')->name('categoria.sto
 
 Route::get('/cargo','CargoController@index')->name('cargo');
 Route::get('/categoria/edit/{cat_id}','CategoriaController@edit')->name('categoria.edit');
+Route::post('/categoria/update/{cat_id}','CategoriaController@update')->name('categoria.update');
+
+Route::post('/categoria/destroy/{cat_id}','CategoriaController@destroy')->name('categoria.destroy');
+//Route::post('/categoria/destroy/{cat_id}',function(){
+	//dd('okk');
+//})->name('categoria.destroy');

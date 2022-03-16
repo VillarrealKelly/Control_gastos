@@ -64,7 +64,10 @@ class CategoriaController extends Controller
     public function edit($id)
     {
         //
-        dd($id);
+        $categoria=Categoria::find($id);
+        return view('categoria.edit')
+        ->with('categoria',$categoria)
+        ;
     }
 
     /**
@@ -77,6 +80,13 @@ class CategoriaController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $Cat=Categoria::find($id);
+        $Cat->update($request->all());
+        return redirect(route('categoria'));
+
+        //$Cat=new Categoria();
+           // Categoria::update($request->all(),$id);
+
     }
 
     /**
@@ -87,6 +97,10 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
+        //dd('okk');
         //
+         Categoria::destroy($id);
+        return redirect(route('categoria'));
+
     }
 }
