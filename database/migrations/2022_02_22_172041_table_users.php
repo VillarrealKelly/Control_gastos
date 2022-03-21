@@ -18,9 +18,10 @@ class TableUsers extends Migration
             $table->id('usu_id');
             $table->string('usu_nombre');
             $table->string('usu_apellido');
+            $table->string('usu_cedula')->unique();
             $table->string('usu_email')->unique();
             $table->string('password');
-            $table->string('usu_cedula')->unique();
+          //  $table->integer('usu_estado')->default(1);
 
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

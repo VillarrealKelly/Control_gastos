@@ -15,7 +15,7 @@ class TipoTable extends Migration
     {
         Schema::create('tipo', function (Blueprint $table) {
             $table->id('tip_id');
-            $table->string('tip_nombre');
+            $table->string('tip_descripcion');
         });  
     }
 

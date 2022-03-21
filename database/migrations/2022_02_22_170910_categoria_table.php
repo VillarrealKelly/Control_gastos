@@ -15,7 +15,7 @@ class CategoriaTable extends Migration
     {
         Schema::create('categoria', function (Blueprint $table) {
             $table->id('cat_id');
-            $table->string('cat_nombre');
+     $table->string('cat_nombre');
             $table->string('cat_descripcion');
         });
     }
