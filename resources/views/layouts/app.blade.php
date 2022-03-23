@@ -28,12 +28,12 @@
                     <img src="https://wallo.com/media/aplicacion-control-gastos-android.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;CONTROL DE GASTOS
                 @else
                 <img src="https://wallo.com/media/aplicacion-control-gastos-android.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;CONTROL DE GASTOS &nbsp; &nbsp; &nbsp; &nbsp;
-                    <a class="btn btn-default" href="{{route('usuarios')}}">Usuarios</a>
-                    <a class="btn btn-default" href="{{route('categoria')}}">Categoria</a>
-                    <a class="btn btn-default" href="{{route('cargo')}}">Cargo</a>
-                    <a class="btn btn-default" href="#">Permiso</a>
-                    <a class="btn btn-default" href="#">Tipo</a>
-                    <a class="btn btn-default" href="#">Control</a>
+                    <a class="btn btn-default" href="{{route('usuarios')}}">USUARIOS</a>
+                    <a class="btn btn-default" href="{{route('categoria')}}">CATEGORIA</a>
+                    <a class="btn btn-default" href="{{route('control')}}">CONTROL</a>
+                    <a class="btn btn-default" href="{{route('cargo')}}">CARGO</a>
+                    <a class="btn btn-default" href="#">PERMISO</a>
+                    <a class="btn btn-default" href="#">TIPO</a>
                 @endguest
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
