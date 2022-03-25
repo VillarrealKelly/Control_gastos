@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
 	<div class="col-md-12">
-		<h1 style="font-family:algeria">Movimientos 
+		<h1 style="font-family:algeria">TIPOS
 		<a href="{{route('tipo.create')}}" class="btn btn-success">
 		<img src="https://cdn-icons-png.flaticon.com/512/32/32360.png" width="20px"> Nueva tipo</a>
 		</h1>
@@ -10,7 +10,7 @@
 
 		<table class="table table-striped table table-sm">
 		<th style="text-align:center;">#</th>
-		<th style="text-align:center;">Descripcion</th>
+		<th style="text-align:center;">Descripción</th>
 
 
 		@foreach($tipo as $tip)

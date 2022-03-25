@@ -36,6 +36,11 @@ Route::post('/categoria/update/{cat_id}','CategoriaController@update')->name('ca
 Route::post('/categoria/destroy/{cat_id}','CategoriaController@destroy')->name('categoria.destroy');
 Route::get('/control','ControlController@index')->name('control');
 Route::get('/control/create','ControlController@create')->name('control.create');
+Route::post('/control/store','ControlController@store')->name('control.store');
+Route::post('/control/destroy/{con_id}','ControlController@destroy')->name('control.destroy');
+Route::post('/control/update/{con_id}','ControlController@update')->name('control.update');
+Route::get('/control/edit/{con_id}','ControlController@edit')->name('control.edit');
+
 
 Route::get('/tipo','tipoController@index')->name('tipo');
 Route::get('/tipo/create','tipoController@create')->name('tipo.create');
@@ -44,7 +49,6 @@ Route::get('/tipo/edit/{tip_id}','tipoController@edit')->name('tipo.edit');
 Route::post('/tipo/store','tipoController@store')->name('tipo.store');
 
 Route::post('/tipo/destroy/{tip_id}','tipoController@destroy')->name('tipo.destroy');
-
 
 
 

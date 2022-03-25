@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\tipo;
+use App\Control;
+use App\Categoria;
+use Auth;
 
 class ControlController extends Controller
 {
@@ -16,7 +19,9 @@ class ControlController extends Controller
     {
         //
         //dd("movimienrto");
-        return view('control.index');
+        $control=Control::all();
+        return view('control.index')
+         ->with('control',$control);
     }
 
     /**
@@ -28,9 +33,14 @@ class ControlController extends Controller
     {
         //
         //dd("holi");
+        $control=Control::all();
         $tipo=tipo::all();
+        $categoria=Categoria::all();
         return view('control.create')
-         ->with('tipo',$tipo);
+         ->with('control',$control)
+         ->with('tipo',$tipo)
+         ->with('categoria',$categoria)
+         ;
     }
 
     /**
@@ -41,7 +51,21 @@ class ControlController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
+        $data=$request->all();
+        //dd($data);
+        $data['usu_id']=Auth::user()->usu_id;
+        Control::create( $data);
+        return redirect(route('control'));
+        //  //
+        //  $data=$request->all();
+        //  $data['usu_id']=Auth::user()->usu_id;
+        //  dd($data);
+        //     // $data['tip_id']=Auth::tipo()->tip_id;
+        //     //    $data['tip_id']=Auth::categoria()->cat_id;
+
+        // Control::create($data);
+        // return redirect(route('control'));
     }
 
     /**
@@ -63,7 +87,14 @@ class ControlController extends Controller
      */
     public function edit($id)
     {
-        //
+     
+       $control=Control::find($id);
+       $tipo=tipo::all();
+        return view('control.edit')
+        ->with('control',$control)
+        ->with('tipo',$tipo)
+        ;
+       //
     }
 
     /**
@@ -76,6 +107,9 @@ class ControlController extends Controller
     public function update(Request $request, $id)
     {
         //
+                $con=Control::find($id);
+        $con->update($request->all());
+        return redirect(route('control'));
     }
 
     /**
@@ -87,5 +121,7 @@ class ControlController extends Controller
     public function destroy($id)
     {
         //
+        Control::destroy($id);
+        return redirect(route('control'));
     }
 }

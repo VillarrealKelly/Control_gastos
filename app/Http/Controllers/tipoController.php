@@ -70,7 +70,7 @@ class tipoController extends Controller
     {
         //
           $tipo=tipo::find($id);
-        return view('categoria.edit')
+        return view('tipo.edit')
         ->with('tipo',$tipo)
         ;
     }
