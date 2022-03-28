@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\tipo;
 use App\Control;
 use App\Categoria;
+use App\User;
 use Auth;
+use DB;
 
 class ControlController extends Controller
 {
@@ -15,11 +17,29 @@ class ControlController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
         //dd("movimienrto");
-        $control=Control::all();
+        //$control=Control::all();
+        $data=$request->all();
+        $desde=date('Y-m-d');
+        $hasta=date('Y-m-d');
+
+        if(isset($data['desde'])){// si lehe dado en el botón buscar
+        $desde=$data['desde'];
+
+        $hasta=$data['hasta'];
+
+        }
+         $control=DB::select("
+            SELECT * FROM control c 
+            Join users u ON c.usu_id=u.usu_id
+            JOIN tipo t ON c.tip_id=t.tip_id
+            JOIN categoria ca ON c.cat_id=ca.cat_id
+            WHERE c.con_fecha BETWEEN '$desde' AND '$hasta'
+
+            ");
         return view('control.index')
          ->with('control',$control);
     }
@@ -124,4 +144,8 @@ class ControlController extends Controller
         Control::destroy($id);
         return redirect(route('control'));
     }
+
+    // public function search(){
+    //     return view('control.index');
+    // }
 }

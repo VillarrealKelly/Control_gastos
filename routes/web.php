@@ -50,6 +50,8 @@ Route::post('/tipo/store','tipoController@store')->name('tipo.store');
 
 Route::post('/tipo/destroy/{tip_id}','tipoController@destroy')->name('tipo.destroy');
 
+Route::post('/control/search','ControlController@index')->name('control.search');
+
 
 
 

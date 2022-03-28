@@ -7,8 +7,14 @@
 			@csrf
 				<div class="form-group">
 					<label for="">Nombre Categoria</label>
-				    <input type="text" name="cat_nombre" id="cat_nombre" class="form-control" placeholder="Escriba el nombre de la categoria">
-  				</div>
+						<select name="cat_id" id="cat_id" class="form-control">
+						<option value="">Elija una opcion</option>
+						@foreach($categoria as $cat)
+						<option value="{{$cat->cat_id}}">{{$cat->cat_nombre}}</option>
+						@endforeach
+					</select>
+				    <!-- <input type="text" name="cat_nombre" id="cat_nombre" class="form-control" placeholder="Escriba el nombre de la categoria">
+ -->  				</div>
 	  			<div class="form-group">
 					<label for="">Descripcion Categoria</label>
 				    <input type="text" name="cat_descripcion" id="cat_descripcion" class="form-control" placeholder="Escriba la descripcion de la categoria">

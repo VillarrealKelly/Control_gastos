@@ -28,7 +28,10 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return view('categoria.create');
+        $categoria=Categoria::all();
+        return view('categoria.create')
+        ->with('categoria',$categoria);
+
     }
 
     /**

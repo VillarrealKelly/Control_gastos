@@ -6,19 +6,48 @@
 		<a href="{{route('control.create')}}" class="btn btn-success">
 		<img src="https://cdn-icons-png.flaticon.com/512/32/32360.png" width="20px"> Nueva Control</a>
 		</h1>
+		<form action="{{route('control.search')}}" method="POST">
+		@csrf
+		Desde: <input type="date" name="desde">
+		Hasta: <input type="date" name="hasta">
+		<button class="btn btn-success"> Buscar</button>			
+		</form>
 
 
 
 		<table class="table table-striped table table-sm">
 		<th style="text-align:center;">#</th>
-	<th style="text-align:center;">CANTIDAD</th>
-	<th style="text-align:center;">FECHA</th>
+		<th style="text-align:center;">USUARIO</th>
+		<th style="text-align:center;">CATEGORIA</th>
+		<th style="text-align:center;">TIPO</th>
+		<th style="text-align:center;">CANTIDAD</th>
+		<th style="text-align:center;">FECHA</th>
+	<?php
+		$t_ing=0;
+		$t_egr=0;
+		$t_saldo=0;
+	?>
 		@foreach($control as $con)
+
+		<?php
+		if ($con->cat_id==2){
+		$t_ing+=$con->con_cantidad;
+		}
+
+		if ($con->cat_id==1){
+		$t_egr+=$con->con_cantidad;
+		}
+		$t_saldo=$t_ing-$t_egr;
+
+		?>
  <tr>
      	<td style="text-align:center">{{$loop->iteration}}</td>
+		<td style="text-align:center">{{$con->usu_apellido}}</td>
+		<td style="text-align:center">{{$con->cat_nombre}}</td>
+		<td style="text-align:center">{{$con->tip_descripcion}}</td>
 		<td style="text-align:center">{{$con->con_cantidad}}</td>
 		<td style="text-align:center">{{$con->con_fecha}}</td>
-	
+
 
      <td>
 					<div class="row">
@@ -44,6 +73,15 @@
 
      </tr>
 		@endforeach
+		<tr>
+			<th colspan="2">TOTALES:
+				<th>INGRESOS:{{$t_ing}}</th>
+				<th>EGRESOS:{{$t_egr}}</th>
+				<th>SALDO:{{$t_saldo}}</th>
+				
+				
+			</th>
+		</tr>
 </table>		
 					
  			
