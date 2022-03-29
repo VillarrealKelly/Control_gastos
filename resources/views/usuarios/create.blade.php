@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
+<script src="{{asset('js/usuario.js')}}"></script>
 <div class="container col-md-4" >
 	<div class="col-md-12" style="margin-top: 2%;">
 		<h3 style="font-family:algeria;text-align: center;"><img src="https://salarios.trabajo.gob.ec/imagenes/registroTrabajo.png" width="40px"> Formulario de registro de Usuarios</h3>
-		 <form action="{{route('usuarios.store')}}" method="POST">
+		 <form action="{{route('usuarios.store')}}" method="POST" onsubmit="return validar()">
 			@csrf
 				<div class="form-group">
 					<label for="">Nombre</label>
@@ -26,7 +27,7 @@
 				    <input type="password" name="password" id="password" class="form-control" placeholder="Escriba su contraseña">
 	  			</div>
 				<div class="form-group">
-					<button class="btn btn-primary"><img src="https://cdn-icons-png.flaticon.com/512/60/60959.png" width="15px"> Registrar</button>
+					<button   type="submit" class="btn btn-primary"><img src="https://cdn-icons-png.flaticon.com/512/60/60959.png" width="15px"> Registrar</button>
 				</div>
 		</form> 
 	</div>

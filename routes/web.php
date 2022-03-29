@@ -52,6 +52,10 @@ Route::post('/tipo/destroy/{tip_id}','tipoController@destroy')->name('tipo.destr
 
 Route::post('/control/search','ControlController@index')->name('control.search');
 
+Route::post('/tipo/search','tipoler@index')->name('tipo.search');
+//Route::post('/control/search','ControlController@index')->name('control.search');
+
+//
 
 
 

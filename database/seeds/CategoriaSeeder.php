@@ -13,8 +13,8 @@ class CategoriaSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('categoria')->insert(['cat_nombre'=>'Egresos','cat_descripcion'=>'administrador']);
+        DB::table('categoria')->insert(['cat_nombre'=>'Egresos','cat_descripcion'=>'']);
 
-        DB::table('categoria')->insert(['cat_nombre'=>'Ingresos','cat_descripcion'=>'Usuarios']);
+        DB::table('categoria')->insert(['cat_nombre'=>'Ingresos','cat_descripcion'=>'']);
     }
 }

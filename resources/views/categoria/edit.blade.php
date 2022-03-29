@@ -6,10 +6,16 @@
 		<h1 style="font-family:algeria;text-align: center;"><img src="https://salarios.trabajo.gob.ec/imagenes/registroTrabajo.png" width="40px"> Formulario de registro</h1>	 
 		<form action="{{route('categoria.update',$categoria->cat_id)}}" method="POST">
 			@csrf
-				<div class="form-group">
+							<div class="form-group">
 					<label for="">Nombre Categoria</label>
-				    <input type="text" value="{{$categoria->cat_nombre}}" name="cat_nombre" id="cat_nombre" class="form-control" placeholder="Escriba el nombre de la categoria">
-  				</div>
+						<select name="cat_nombre" id="cat_nombre" class="form-control">
+						<option >Elija una opcion</option>
+						@foreach($categoria as $cat)
+						<option value="{{$cat->cat_id}}">{{$cat->cat_nombre}}</option>
+						@endforeach
+					</select>
+				    <!-- <input type="text" name="cat_nombre" id="cat_nombre" class="form-control" placeholder="Escriba el nombre de la categoria">
+ -->  				</div>
 	  			<div class="form-group">
 					<label for="">Descripcion Categoria</label>
 				    <input type="text" value="{{$categoria->cat_descripcion}}" name="cat_descripcion" id="cat_descripcion" class="form-control" placeholder="Escriba la descripcion de la categoria">

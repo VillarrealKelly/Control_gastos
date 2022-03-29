@@ -41,7 +41,10 @@ class ControlController extends Controller
 
             ");
         return view('control.index')
-         ->with('control',$control);
+         ->with('control',$control)
+         ->with('desde',$desde)
+         ->with('hasta',$hasta)   
+                     ;
     }
 
     /**

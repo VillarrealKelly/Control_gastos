@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
 	<div class="col-md-12">
 		<h1 style="font-family:algeria">CONTROL
@@ -8,8 +9,8 @@
 		</h1>
 		<form action="{{route('control.search')}}" method="POST">
 		@csrf
-		Desde: <input type="date" name="desde">
-		Hasta: <input type="date" name="hasta">
+		Desde: <input type="date" name="desde" value="{{$desde}}">
+		Hasta: <input type="date" name="hasta" value="{{$hasta}}">
 		<button class="btn btn-success"> Buscar</button>			
 		</form>
 

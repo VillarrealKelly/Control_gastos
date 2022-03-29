@@ -1,9 +1,11 @@
 @extends('layouts.app')
 @section('content')
+<script src="{{asset('js/control.js')}}"></script>
+
 <div class="container col-md-4" >
 	<div class="col-md-12" style="margin-top: 15%;">
 		<h1 style="font-family:algeria;text-align: center;"><img src="https://salarios.trabajo.gob.ec/imagenes/registroTrabajo.png" width="40px"> Formulario de registro</h1>	 
-		<form action="{{route('control.store')}}" method="POST">
+		<form action="{{route('control.store')}}" method="POST" onsubmit="return validar()" >
 			@csrf
 			<div class="row">
 				<div class="col-md-6">
@@ -37,7 +39,7 @@
 					<input type="date" name="con_fecha" id="con_fecha" class="form-control" >
   				</div>
   				<div class="col-md-4" style="margin-top: 2%;">
-					<button class="btn btn-primary"><img src="https://cdn-icons-png.flaticon.com/512/60/60959.png" width="15px"> Registrar</button>
+					<button type="submit" class="btn btn-primary"><img src="https://cdn-icons-png.flaticon.com/512/60/60959.png" width="15px"> Registrar</button>
 				</div>
 			</div>
 		</form>
