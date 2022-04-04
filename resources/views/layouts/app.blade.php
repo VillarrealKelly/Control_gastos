@@ -32,8 +32,8 @@
                     <a class="btn btn-default" href="{{route('usuarios')}}">USUARIOS</a>
                     <a class="btn btn-default" href="{{route('categoria')}}">CATEGORIA</a>
                     <a class="btn btn-default" href="{{route('control')}}">CONTROL</a>
-                    <a class="btn btn-default" href="{{route('cargo')}}">CARGO</a>
-                    <a class="btn btn-default" href="#">PERMISO</a>
+                  <!--   <a class="btn btn-default" href="{{route('cargo')}}">CARGO</a>
+                    <a class="btn btn-default" href="#">PERMISO</a> -->
                     <a class="btn btn-default" href="{{route('tipo')}}">TIPO</a>
                 @endguest
 

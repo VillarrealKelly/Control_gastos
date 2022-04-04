@@ -9,6 +9,8 @@ use App\Categoria;
 use App\User;
 use Auth;
 use DB;
+use PDF;
+
 
 class ControlController extends Controller
 {
@@ -19,8 +21,13 @@ class ControlController extends Controller
      */
     public function index(Request $request)
     {
-        //
-        //dd("movimienrto");
+
+
+    //       $pdf = app('dompdf.wrapper');
+    // $pdf->loadHTML('<h1>pdf</h1>');
+    // return $pdf->stream();
+    //     //dd('en m');
+
         //$control=Control::all();
         $data=$request->all();
         $desde=date('Y-m-d');
@@ -28,7 +35,6 @@ class ControlController extends Controller
 
         if(isset($data['desde'])){// si lehe dado en el botón buscar
         $desde=$data['desde'];
-
         $hasta=$data['hasta'];
 
         }
@@ -40,6 +46,12 @@ class ControlController extends Controller
             WHERE c.con_fecha BETWEEN '$desde' AND '$hasta'
 
             ");
+        if (isset($data['btn_pdf'])) {
+            $data=['control'=>$control];
+        $pdf= PDF::loadView('control.reporte',$data);
+        return $pdf->stream('reporte.pdf');            
+        }
+
         return view('control.index')
          ->with('control',$control)
          ->with('desde',$desde)
@@ -47,6 +59,7 @@ class ControlController extends Controller
                      ;
     }
 
+        
     /**
      * Show the form for creating a new resource.
      *
