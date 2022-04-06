@@ -1,16 +1,13 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
 
 <div class="container">
 	<div class="col-md-12">
 		<h1 style="text-align:center; font-family:algeria">
-			   <img src="https://wallo.com/media/aplicacion-control-gastos-android.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;CONTROL DE GASTOS </h1>
+			   <img src="https://previews.123rf.com/images/lemonadeserenade/lemonadeserenade1604/lemonadeserenade160400132/55605301-pila-de-monedas-d%C3%B3lar-un-ejemplo-del-vector-dibujado-a-mano-de-una-pila-de-monedas-de-oro-con-el-sig.jpg" width="60" height="60" class="d-inline-block align-top" alt="">&nbsp;&nbsp;CONTROL DE GASTOS </h1>
 <h3  >REPORTE </h3>
 
 
 
-		<table class="table table-striped table table-sm" >
+		<table class="table table-striped table table-sm" border="1" align="center" cellspacing="1" cellpadding="4">
 		<th style="text-align:center;" >#</th>
 		<th style="text-align:center;">USUARIO</th>
 		<th style="text-align:center;">CATEGORIA</th>
@@ -47,7 +44,7 @@
      <td>
 
 		@endforeach
-<!-- 		<tr>
+		<tr>
 			<th colspan="3">TOTAL:
 				<th>INGRESOS:{{$t_ing}}</th>
 				<th>EGRESOS:{{$t_egr}}</th>
@@ -55,7 +52,7 @@
 				
 				
 			</th>
-		</tr> -->
+		</tr>
 </table>
 	</div>
 </div>			

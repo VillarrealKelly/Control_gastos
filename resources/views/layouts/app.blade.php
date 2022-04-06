@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Control Gasto') }}</title>
+    <title>{{ config('app.name', 'Control Gastos') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,15 +26,24 @@
             <div class="container">
                 
                 @guest
-                    <img src="https://wallo.com/media/aplicacion-control-gastos-android.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;CONTROL DE GASTOS
+                    <img src="https://previews.123rf.com/images/lemonadeserenade/lemonadeserenade1604/lemonadeserenade160400132/55605301-pila-de-monedas-d%C3%B3lar-un-ejemplo-del-vector-dibujado-a-mano-de-una-pila-de-monedas-de-oro-con-el-sig.jpg"  width="50" height="50" class="d-inline-block align-top "alt="">&nbsp;&nbsp;CONTROL DE GASTOS
                 @else
-                <img src="https://wallo.com/media/aplicacion-control-gastos-android.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;&nbsp;CONTROL DE GASTOS &nbsp; &nbsp; &nbsp; &nbsp;
+                <img src="https://previews.123rf.com/images/lemonadeserenade/lemonadeserenade1604/lemonadeserenade160400132/55605301-pila-de-monedas-d%C3%B3lar-un-ejemplo-del-vector-dibujado-a-mano-de-una-pila-de-monedas-de-oro-con-el-sig.jpg" width="50" height="50" class="d-inline-block align-top " alt="" >&nbsp;&nbsp;CONTROL DE GASTOS &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                   
                     <a class="btn btn-default" href="{{route('usuarios')}}">USUARIOS</a>
                     <a class="btn btn-default" href="{{route('categoria')}}">CATEGORIA</a>
                     <a class="btn btn-default" href="{{route('control')}}">CONTROL</a>
+                    <a class="btn btn-default" href="{{route('tipo')}}">TIPO</a>
+                     &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+
+    
+<a href="https://github.com/VillarrealKelly/Control_gastos" target="_blank">
+                    <img src="https://img2.freepng.es/20180716/tza/kisspng-github-computer-icons-clip-art-gits-5b4d20ab1f4131.145288281531781291128.jpg" width="30" height="30">
+    
+</a>
+                    
                   <!--   <a class="btn btn-default" href="{{route('cargo')}}">CARGO</a>
                     <a class="btn btn-default" href="#">PERMISO</a> -->
-                    <a class="btn btn-default" href="{{route('tipo')}}">TIPO</a>
                 @endguest
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -80,7 +89,10 @@
                                         <a style="text-align: center;" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                                     <img src="https://cdn-icons-png.flaticon.com/512/35/35702.png" width="15px">
+                                                     <!-- <img src="" width="15px"> -->
+                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/>
+</svg>
                                         Cerrar Session
                                         </a>
 

@@ -11,7 +11,7 @@
 						<select name="cat_nombre" id="cat_nombre" class="form-control">
 						<option >Elija una opcion</option>
 						@foreach($categoria as $cat)
-						<option value="{{$cat->cat_id}}">{{$cat->cat_nombre}}</option>
+						<option selected value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
 						@endforeach
 					</select>
 				    <!-- <input type="text" name="cat_nombre" id="cat_nombre" class="form-control" placeholder="Escriba el nombre de la categoria">

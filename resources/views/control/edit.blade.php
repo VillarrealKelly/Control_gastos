@@ -6,40 +6,41 @@
 		<form action="{{route('control.update',$control->con_id)}}" method="POST">
 			@csrf
 <div class="container">
-	<div class="row">
-	<div class="col-md-12">
-		
-
-	
-			<label for="">CONCEPTO</label>
-			<select name="" id="" class="form-control">
-		
-			@foreach($tipo as $tip)
-			<option value="{{$tip->tip_id}}"> {{$tip->tip_descripcion}} </option>
-			@endforeach			
-
-			</select>
-
-			<div class="col-md-12">
-				<label for="">Fecha:</label>
-				<input type="date" class="form-control" id="con_fecha" name="con_fecha">
+			<div class="row">
+				<div class="col-md-6">
+					<label for="">Categoria</label>
+					<select name="cat_id" id="cat_id" class="form-control">
+						<option value="">Elija una opcion</option>
+						@foreach($categoria as $cat)
+						<option value="{{$cat->cat_id}}">{{$cat->cat_nombre}}</option>
+						@endforeach
+					</select>
+  				</div>
+  				<div class="col-md-6">
+					<label for="">Tipo</label>
+					<select name="tip_id" id="tip_id" class="form-control">
+						<option value="">Elija una opcion</option>
+						@foreach($tipo as $tip)
+						<option value="{{$tip->tip_id}}">{{$tip->tip_descripcion}}</option>
+						@endforeach
+					</select>
+  				</div>
+  				<div class="col-md-12">
+					<label for="">Descripcion</label>
+					<input type="text" name="con_descripcion" id="con_descripcion" class="form-control" placeholder="Escriba la descripcion">
+  				</div>
+  				<div class="col-md-12">
+					<label for="">Cantidad</label>
+					<input type="number" name="con_cantidad" id="con_cantidad" class="form-control" placeholder="Escriba la cantidad">
+  				</div>
+  				<div class="col-md-12">
+					<label for="">Fecha</label>
+					<input type="date" name="con_fecha" id="con_fecha" class="form-control" >
+  				</div>
+  				<div class="col-md-4" style="margin-top: 2%;">
+					<button type="submit" class="btn btn-primary"><img src="https://cdn-icons-png.flaticon.com/512/60/60959.png" width="15px"> Registrar</button>
+				</div>
 			</div>
-			<div class="col-md-12 p-3">
-				Ingreso:<input type="radio" name="cad_id" value="1">
-				Egreso:<input type="radio" name="cad_id" value="0">
-				
-			</div>
-			<div class="col-md-12">
-				<label for="">CANTIDAD</label>
-				<input type="text" class="form-control" id="con_cantidad" name="con_cantidad">
-			</div>
-			<div class="col-md-12">
-				<button class="btn btn-success">Guardar</button>
-			</div>
-				<div></div>
-			
-	</div>	
-	</div>
 </div>
 
 		</form>
