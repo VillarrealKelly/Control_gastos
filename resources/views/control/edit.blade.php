@@ -25,15 +25,15 @@
 					</select>
   				</div>
   				<div class="col-md-12">
-					<label for="">Descripcion</label>
-					<input   value="{{$control->cat_descripcion}}" type="text" name="cat_descripcion" id="cat_descripcion" class="form-control" placeholder="Escriba la descripcion">
+					<label for="">Descripción:</label>
+					<input   value="{{$control->con_descripcion}}" type="text" name="con_descripcion" id="cat_descripcion" class="form-control" placeholder="Escriba la descripcion">
   				</div>
   				<div class="col-md-12">
-					<label for="">Cantidad</label>
+					<label for="">Cantidad:</label>
 					<input   value="{{$control->con_cantidad}}" type="number" name="con_cantidad" id="con_cantidad" class="form-control" placeholder="Escriba la cantidad">
   				</div>
   				<div class="col-md-12">
-					<label for="">Fecha</label>
+					<label for="">Fecha:</label>
 					<input  value="{{$control->con_fecha}}" type="date" name="con_fecha" id="con_fecha" class="form-control" >
   				</div>
   				<div class="col-md-4" style="margin-top: 2%;">

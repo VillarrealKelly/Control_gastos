@@ -7,23 +7,23 @@
 		 <form action="{{route('usuarios.store')}}" method="POST" onsubmit="return validar()">
 			@csrf
 				<div class="form-group">
-					<label for="">Nombre</label>
+					<label for="">Nombre:</label>
 				    <input type="text" name="usu_nombre" id="usu_nombre" class="form-control" placeholder="Escriba su nombre">
   				</div>
 	  			<div class="form-group">
-					<label for="">Apellido </label>
+					<label for="">Apellido:</label>
 				    <input type="text" name="usu_apellido" id="usu_apellido" class="form-control" placeholder="Escriba su apellido">
 	  			</div>
 	  			<div class="form-group">
-					<label for="">Email </label>
+					<label for="">Email:</label>
 				    <input type="email" name="usu_email" id="usu_email" class="form-control" placeholder="Escriba su email">
 	  			</div>
 	  			<div class="form-group">
-					<label for="">Cedula </label>
+					<label for="">Cedula: </label>
 				    <input type="text" name="usu_cedula" id="usu_cedula" class="form-control" placeholder="Escriba su numero de cedula" maxlength="10">
 	  			</div>
 	  			<div class="form-group">
-					<label for="">Contraseña </label>
+					<label for="">Contraseña: </label>
 				    <input type="password" name="password" id="password" class="form-control" placeholder="Escriba su contraseña">
 	  			</div>
 				<div class="form-group">

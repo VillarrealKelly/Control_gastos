@@ -30,7 +30,7 @@ if($categoria->cat_nombre==1){
  -->  				</div>
 	  			<div class="form-group">
 					<label for="">Descripcion Categoria</label>
-				    <input type="text" value="{{$categoria->cat_descripcion}}" name="cat_descripcion" id="cat_descripcion" class="form-control" placeholder="Escriba la descripcion de la categoria">
+				    <input type="text" value="{{$categoria->cat_descripcion}}" name="cat_descripcion" id="cat_descripcion" class="form-control" placeholder="Escriba la descripción de la categoria">
 	  			</div>
 				<div class="form-group">
 					<button class="btn btn-primary"><img src="https://cdn-icons-png.flaticon.com/512/60/60959.png" width="15px"> Registrar</button>

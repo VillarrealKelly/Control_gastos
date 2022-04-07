@@ -10,7 +10,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -39,7 +39,7 @@
                 font-size: 84px;
             }
             .links > a {
-                color: #636b6f;
+                color: #752F34;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -59,19 +59,19 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">ENTRAR</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">REGISTRARSE</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+              <marquee>  <div class="title m-b-md" style="font-family:algeria;">
                     CONTROL DE GASTOS
-                </div>
+                </div></marquee>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>

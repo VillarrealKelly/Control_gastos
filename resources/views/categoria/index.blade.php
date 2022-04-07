@@ -9,7 +9,7 @@
 		<table class="table table-striped table table-sm">
 		<th style="text-align:center;">#</th>
 		<th style="text-align:center;">Nombre</th>
-		<th style="text-align:center;">Descripcion</th>
+		<th style="text-align:center;">Descripción</th>
 		@foreach($categoria as $cat)
 			<tr>
 				<td style="text-align:center;">{{$loop->iteration}}</td>
