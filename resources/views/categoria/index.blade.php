@@ -13,8 +13,13 @@
 		@foreach($categoria as $cat)
 			<tr>
 				<td style="text-align:center;">{{$loop->iteration}}</td>
-				<td style="text-align:center;">{{$cat->cat_nombre}}</td>
-				<td style="text-align:center;">{{$cat->cat_descripcion}}</td>
+				@if($cat->cat_nombre==1)
+				<td style="text-align:center;">Ingreso</td>
+				@else
+				<td style="text-align:center;">Egreso</td>
+				@endif
+				<!-- <td style="text-align:center;">{{$cat->cat_nombre}}</td>
+ -->				<td style="text-align:center;">{{$cat->cat_descripcion}}</td>
 				<td>
 					<div class="row">
 					<a href="{{route('categoria.edit',$cat->cat_id)}}" class="btn btn-info  btn-sm" title="Editar" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">

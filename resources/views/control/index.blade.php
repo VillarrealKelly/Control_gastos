@@ -45,7 +45,12 @@
  <tr>
      	<td style="text-align:center">{{$loop->iteration}}</td>
 		<td style="text-align:center">{{$con->usu_apellido}}</td>
-		<td style="text-align:center">{{$con->cat_nombre}}</td>
+<!-- 		<td style="text-align:center">{{$con->cat_nombre}}</td> -->
+						@if($con->cat_nombre==1)
+				<td style="text-align:center;">Ingreso</td>
+				@else
+				<td style="text-align:center;">Egreso</td>
+				@endif
 		<td style="text-align:center">{{$con->tip_descripcion}}</td>
 		<td style="text-align:center">{{$con->con_cantidad}}</td>
 		<td style="text-align:center">{{$con->con_fecha}}</td>

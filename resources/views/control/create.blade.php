@@ -11,10 +11,9 @@
 				<div class="col-md-6">
 					<label for="">Categoria</label>
 					<select name="cat_id" id="cat_id" class="form-control">
-						<option value="">Elija una opcion</option>
-						@foreach($categoria as $cat)
-						<option value="{{$cat->cat_id}}">{{$cat->cat_nombre}}</option>
-						@endforeach
+	<option disabled="">Seleccione una categoria</option>
+						<option value="1">Ingreso</option>
+						<option value="2">Egreso</option>
 					</select>
   				</div>
   				<div class="col-md-6">

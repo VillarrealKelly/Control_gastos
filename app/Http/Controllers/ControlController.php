@@ -126,7 +126,7 @@ class ControlController extends Controller
      
        $control=Control::find($id);
        $tipo=tipo::all();
-         $categoria=Categoria::all();
+       $categoria=Categoria::all();
         return view('control.edit')
         ->with('control',$control)
         ->with('tipo',$tipo)

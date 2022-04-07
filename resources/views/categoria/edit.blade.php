@@ -1,5 +1,15 @@
 @extends('layouts.app')
 @section('content')
+<?php 
+$ing="";
+$egr="";
+if($categoria->cat_nombre==1){
+	$ing="selected";
+}else{
+    $egr="selected";
+}
+ ?>
+
 
 <div class="container col-md-4" >
 	<div class="col-md-12" style="margin-top: 25%;">
@@ -8,11 +18,13 @@
 			@csrf
 							<div class="form-group">
 					<label for="">Nombre Categoria</label>
-						<select name="cat_nombre" id="cat_nombre" class="form-control">
-						<option >Elija una opcion</option>
-						@foreach($categoria as $cat)
-						<option selected value="{{$categoria->cat_id}}">{{$categoria->cat_nombre}}</option>
-						@endforeach
+						<select name="cat_nombre" id="cat_nombre" class="form-control @error('cat_nombre') isinvalid @enderror">
+				
+					
+						<option disabled="">Seleccione una categoria</option>
+						<option {{$ing}} value="1">Ingreso</option>
+						<option {{$egr}}  value="2">Egreso</option>
+						
 					</select>
 				    <!-- <input type="text" name="cat_nombre" id="cat_nombre" class="form-control" placeholder="Escriba el nombre de la categoria">
  -->  				</div>
